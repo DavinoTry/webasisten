@@ -89,6 +89,7 @@ class AsistenController extends BaseController
 
     public function logout()
     {
+
         $session = session();
         $session->remove('pengguna');
         return view('/asisten/login');
