@@ -14,29 +14,33 @@
         <div class="container p-5 text-white rounded" style="background-color: #2c90c6;">
             <h1 style="text-align: center;">Pendaftaran Asisten Praktikum</h1>
         </div>
-        <table class="table table-striped">
-            <tr>
-                <th scope="col">No.</th>
-                <th scope="col">NIM</th>
-                <th scope="col">Nama</th>
-                <th scope="col">Kelas Praktikum</th>
-                <th scope="col">IPK</th>
-            </tr>
-            <?php $i = 1 ?>
-            <?php foreach ($asisten as $ast) : ?>
-                <tr>
-                    <td><?= $i++ ?></td>
-                    <td><?= esc($ast['NIM']) ?></td>
-                    <td><?= esc($ast['NAMA']) ?></td>
-                    <td><?= esc($ast['PRAKTIKUM']) ?></td>
-                    <td><?= esc($ast['IPK']) ?></td>
-                </tr>
-            <?php endforeach; ?>
-        </table>
+        <div class="row mt-3">
+            <div class="col-12">
+                <table class="table table-striped">
+                    <tr>
+                        <th scope="col">No.</th>
+                        <th scope="col">NIM</th>
+                        <th scope="col">Nama</th>
+                        <th scope="col">Kelas Praktikum</th>
+                        <th scope="col">IPK</th>
+                    </tr>
+                    <?php $i = 1 ?>
+                    <?php foreach ($asisten as $ast) : ?>
+                        <tr>
+                            <td><?= $i++ ?></td>
+                            <td><?= esc($ast['NIM']) ?></td>
+                            <td><?= esc($ast['NAMA']) ?></td>
+                            <td><?= esc($ast['PRAKTIKUM']) ?></td>
+                            <td><?= esc($ast['IPK']) ?></td>
+                        </tr>
+                    <?php endforeach; ?>
+                </table>
+            </div>
+            <div class="col-12 mt-3">
+                <a href="/asisten/logout" class="btn btn-danger">Logout</a>
+            </div>
+        </div>
     </div>
-    <br>
-    <a href="/asisten/logout">Logout</a>
-
 </body>
 
 </html>
