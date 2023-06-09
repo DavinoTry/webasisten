@@ -67,7 +67,6 @@ class AsistenController extends BaseController
         if (!$this->request->is('post')) {
             return view('/asisten/search');
         }
-
         $nim = $this->request->getPost(['key']);
 
         $model = model(AsistenModel::class);
