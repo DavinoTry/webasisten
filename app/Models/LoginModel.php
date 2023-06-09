@@ -14,7 +14,7 @@ class LoginModel extends Model
         return $this->findAll();
     }
 
-    public function simpanLogin($record)
+    public function simpan($record)
     {
         $this->save([
             'Username' => $record['usr'],
