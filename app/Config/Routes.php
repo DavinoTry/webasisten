@@ -32,6 +32,7 @@ $routes->setAutoRoute(true);
 use App\Controllers\AsistenController;
 
 $routes->get('asisten', 'AsistenController::index');
+$routes->get('/asisten/logout', 'AsistenController::logout');
 
 $routes->match(
     ['get', 'post'],
@@ -62,6 +63,9 @@ $routes->match(
     'asisten/login',
     [AsistenController::class, 'check']
 );
+
+
+
 
 // $routes->match(['get', 'post'], 'asisten/login', [Login::class, 'check']);
 // $routes->get('login/home', [Login::class, 'home']);

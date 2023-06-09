@@ -35,7 +35,8 @@
         </table>
     </div>
     <br>
-    <input type="submit" name="" value="Simpan" />
+    <a href="/asisten/logout">Logout</a>
+
 </body>
 
 </html>
