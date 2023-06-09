@@ -85,11 +85,19 @@ class AsistenController extends BaseController
         if ($asisten == null) {
             return view('/asisten/login');
         }
+
+        if ($post['pwd'] == $asisten['Password']) {
+            $session = session();
+            $session->set('pengguna', $post['usr']);
+            $view = new AsistenController;
+            return $view->index();
+        } else {
+            return view('/asisten/login');
+        }
     }
 
     public function logout()
     {
-
         $session = session();
         $session->remove('pengguna');
         return view('/asisten/login');
