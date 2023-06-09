@@ -34,6 +34,8 @@
             <?php endforeach; ?>
         </table>
     </div>
+    <br>
+    <input type="submit" name="" value="Simpan" />
 </body>
 
 </html>
