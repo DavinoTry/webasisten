@@ -78,13 +78,13 @@ class AsistenController extends BaseController
 
     public function check()
     {
-        if (!$this->request->is('post')) {
-            return view('/asisten/login');
-        }
-
         $post = $this->request->getPost(['usr', 'pwd']);
         $model = model(LoginModel::class);
         $asisten = $model->ambil($post['usr']);
+
+        if ($asisten == null) {
+            return view('/asisten/login');
+        }
     }
 
     public function logout()
